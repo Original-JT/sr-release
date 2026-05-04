@@ -50,13 +50,7 @@ curl -fsSL https://originaljt.com/install.sh | sh
 iwr -useb https://originaljt.com/install.ps1 | iex
 ```
 
-The installer detects your platform, resolves the latest release, verifies the SHA-256 checksum, and places `sr` at `~/.sr/bin/sr` (or `%USERPROFILE%\.sr\bin\sr.exe`). Then run:
-
-```bash
-sr init
-```
-
-to add `~/.sr/bin/` to your `PATH`.
+The installer detects your platform, resolves the latest release, verifies the SHA-256 checksum, places `sr` at `~/.sr/bin/sr` (or `%USERPROFILE%\.sr\bin\sr.exe`), and adds that directory to your `PATH`. Restart your shell and you're done.
 
 ### Pinning a specific version
 
