@@ -54,6 +54,18 @@ iwr -useb https://originaljt.com/install.ps1 | iex
 
 The installer detects your platform, resolves the latest release, verifies the SHA-256 checksum, places `sr` at `~/.sr/bin/sr` (or `%USERPROFILE%\.sr\bin\sr.exe`), and adds that directory to your `PATH`. Restart your shell and you're done.
 
+### Updating
+
+Once `sr` is installed, run:
+
+```bash
+sr upgrade            # download and install the latest release if newer
+sr upgrade --check    # report availability only; don't download
+sr upgrade --force    # re-install the latest release even when already up to date
+```
+
+`sr upgrade` fetches the latest build from this repo, verifies its SHA-256 against the published `SHA256SUMS`, and atomically replaces `~/.sr/bin/sr`. Your cache, config, and global shims are preserved.
+
 ### Pinning a specific version
 
 ```bash
