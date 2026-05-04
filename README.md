@@ -38,48 +38,46 @@ That's it. Dependencies installed into a shared cache. Runtimes auto-installed v
 
 `sr` ships as a single self-contained binary — no prerequisites. On first run it bootstraps `mise`, which then provisions any runtime your script asks for.
 
-Releases are published here. Download the archive for your platform, extract, and put `sr` on your `PATH`.
-
-### macOS (Apple Silicon)
+### macOS (Apple Silicon) and Linux (x86_64)
 
 ```bash
-LATEST=$(curl -s https://api.github.com/repos/Original-JT/sr-release/releases/latest \
-  | sed -n 's/.*"tag_name": *"\([^"]*\)".*/\1/p')
-curl -L "https://github.com/Original-JT/sr-release/releases/download/$LATEST/sr-$LATEST-aarch64-apple-darwin.tar.gz" \
-  | tar -xz
-sudo mv "sr-$LATEST-aarch64-apple-darwin/sr" /usr/local/bin/
-```
-
-### Linux (x86_64)
-
-```bash
-LATEST=$(curl -s https://api.github.com/repos/Original-JT/sr-release/releases/latest \
-  | sed -n 's/.*"tag_name": *"\([^"]*\)".*/\1/p')
-curl -L "https://github.com/Original-JT/sr-release/releases/download/$LATEST/sr-$LATEST-x86_64-unknown-linux-musl.tar.gz" \
-  | tar -xz
-sudo mv "sr-$LATEST-x86_64-unknown-linux-musl/sr" /usr/local/bin/
+curl -fsSL https://originaljt.com/install.sh | sh
 ```
 
 ### Windows (x86_64)
 
 ```powershell
-$Latest = (Invoke-RestMethod https://api.github.com/repos/Original-JT/sr-release/releases/latest).tag_name
-$Asset  = "sr-$Latest-x86_64-pc-windows-msvc.zip"
-Invoke-WebRequest -Uri "https://github.com/Original-JT/sr-release/releases/download/$Latest/$Asset" -OutFile $Asset
-Expand-Archive $Asset -DestinationPath .
-Move-Item ".\sr-$Latest-x86_64-pc-windows-msvc\sr.exe" "$env:USERPROFILE\bin\sr.exe"
+iwr -useb https://originaljt.com/install.ps1 | iex
 ```
 
-After install, `sr init` will set up `~/.sr/` and add `~/.sr/bin/` to your `PATH`.
-
-### Verify the download
-
-Each release publishes a `SHA256SUMS` file alongside the archives:
+The installer detects your platform, resolves the latest release, verifies the SHA-256 checksum, and places `sr` at `~/.sr/bin/sr` (or `%USERPROFILE%\.sr\bin\sr.exe`). Then run:
 
 ```bash
-curl -LO "https://github.com/Original-JT/sr-release/releases/download/$LATEST/SHA256SUMS"
+sr init
+```
+
+to add `~/.sr/bin/` to your `PATH`.
+
+### Pinning a specific version
+
+```bash
+curl -fsSL https://originaljt.com/install.sh | SR_VERSION=YYYYMMDD-shortsha sh
+```
+
+```powershell
+$env:SR_VERSION = "YYYYMMDD-shortsha"; iwr -useb https://originaljt.com/install.ps1 | iex
+```
+
+### Manual download (advanced)
+
+If you'd rather not pipe a script to your shell, [browse releases](https://github.com/Original-JT/sr-release/releases) and download the archive for your target. Each release also publishes a `SHA256SUMS` file:
+
+```bash
+curl -LO "https://github.com/Original-JT/sr-release/releases/download/$VERSION/SHA256SUMS"
 sha256sum -c SHA256SUMS --ignore-missing
 ```
+
+> On macOS, files downloaded through a browser are tagged with a quarantine attribute, which triggers an "Apple cannot verify" warning on first run. Either remove the quarantine (`xattr -d com.apple.quarantine sr`) or, simpler, use the curl one-liner above — files fetched by `curl` aren't quarantined.
 
 ## In 30 seconds
 
