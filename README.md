@@ -1,5 +1,7 @@
 # sr — one-file scripts, any runtime
 
+> **Home: [originaljt.com](https://originaljt.com)** &nbsp;·&nbsp; [Docs](https://originaljt.com/docs/installation/) &nbsp;·&nbsp; [Pricing](https://originaljt.com/pricing/) &nbsp;·&nbsp; [Downloads](https://github.com/Original-JT/sr-release/releases)
+
 **`sr`** runs self-contained scripts across **13 runtimes** with inline dependency metadata. No `package.json`. No `requirements.txt`. No `go.mod`. No project files. Just a single script that knows what it needs.
 
 ```typescript
@@ -62,9 +64,9 @@ curl -fsSL https://originaljt.com/install.sh | SR_VERSION=YYYYMMDD-shortsha sh
 $env:SR_VERSION = "YYYYMMDD-shortsha"; iwr -useb https://originaljt.com/install.ps1 | iex
 ```
 
-### Manual download (advanced)
+### Manual download
 
-If you'd rather not pipe a script to your shell, [browse releases](https://github.com/Original-JT/sr-release/releases) and download the archive for your target. Each release also publishes a `SHA256SUMS` file:
+Prefer to grab a binary directly? Every build is published at **[github.com/Original-JT/sr-release/releases](https://github.com/Original-JT/sr-release/releases)** with archives for macOS (Apple Silicon), Linux (x86_64), and Windows (x86_64), plus a `SHA256SUMS` file:
 
 ```bash
 curl -LO "https://github.com/Original-JT/sr-release/releases/download/$VERSION/SHA256SUMS"
@@ -93,21 +95,27 @@ Want a different runtime? `sr new deploy --python`, `--bun`, `--go`, `--ruby`, `
 - **Editable.** `sr edit script.ts` opens the script in your IDE with the cache wired in for autocomplete and type-checking.
 - **Cross-platform.** macOS (Apple Silicon), Linux (x86_64), Windows (x86_64).
 
-## Documentation & purchase
+## Documentation
 
-Full docs, guides, and licensing live at **[originaljt.com](https://originaljt.com)**.
+Full guides, command reference, and configuration docs live at **[originaljt.com/docs](https://originaljt.com/docs/installation/)**.
 
-## License
+## Pricing & licensing
 
-`sr` is **commercial software**. The included `LICENSE` file is the binding agreement; the summary below is informational only.
+`sr` is **free for personal, non-commercial use** — the full tool, all 13 runtimes, all future updates, no time limit. Commercial use is a one-time purchase: no subscriptions, no license keys, no activation. Your receipt is your license.
 
-- Per-user license, paid.
-- A free evaluation period is available for prospective buyers.
-- Redistribution, sublicensing, reverse engineering, and use as a hosted service for third parties are **not** permitted without a separate agreement.
-- Open-source dependency licenses are bundled in `LICENSES.md` inside every release archive.
+| Tier | Price | Use |
+|---|---|---|
+| **Personal** | Free | Non-commercial — side projects, learning, OSS contributions |
+| **Individual** | $19 one-time | One person, commercial use |
+| **Team** | $199 one-time | Up to 15 people, commercial use |
+| **Enterprise** | Contact us | 16+ people |
 
-For licensing questions or volume / team agreements, contact the address listed at [originaljt.com](https://originaljt.com).
+Commercial licenses are coming soon — see **[originaljt.com/pricing](https://originaljt.com/pricing/)** for current status, FAQ, and the "notify me" link.
+
+The `LICENSE` file bundled in each release archive is the binding agreement. Open-source dependency licenses are bundled in `LICENSES.md` alongside it. Redistribution, sublicensing, reverse engineering, and use as a hosted service for third parties are **not** permitted without a separate agreement.
+
+For enterprise pricing or custom agreements, contact the address listed at [originaljt.com](https://originaljt.com).
 
 ---
 
-_`sr` is built and maintained by Original JT LLC. Issues filed here are public; please don't include license keys, account info, or other sensitive data in bug reports._
+_`sr` is built and maintained by Original JT LLC. Visit **[originaljt.com](https://originaljt.com)** for everything else. Issues filed here are public; please don't include account info or other sensitive data in bug reports._
