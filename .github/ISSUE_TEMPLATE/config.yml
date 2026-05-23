@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or help ("how do I…")
+    url: https://github.com/Original-JT/sr-release/discussions/categories/q-a
+    about: Ask in Q&A Discussions. Usage questions aren't bugs — you'll get an answer faster here.
+  - name: Documentation
+    url: https://originaljt.com/docs/installation/
+    about: Install guides, command reference, and configuration docs.
+  - name: Licensing, billing, or commercial support
+    url: mailto:support@originaljt.com
+    about: Anything about pricing, licenses, or priority support. Please don't open public issues for these.
+  - name: Report a security vulnerability
+    url: https://github.com/Original-JT/sr-release/security/advisories/new
+    about: Report privately. Do NOT open a public issue for security problems — see SECURITY.md.

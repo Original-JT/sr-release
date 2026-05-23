@@ -1,0 +1,34 @@
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Asking how to do something with sr? You're in the right place.
+
+        If you think you've found a bug, open a
+        [bug report](https://github.com/Original-JT/sr-release/issues/new/choose)
+        instead. And remember: this is public — scrub tokens and private-registry
+        URLs from anything you paste.
+  - type: textarea
+    id: question
+    attributes:
+      label: What are you trying to do?
+      description: Describe the goal and where you're stuck.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: sr version
+      description: Output of `sr --version`, if relevant.
+      placeholder: "sr 20260523-a1b2c3d"
+    validations:
+      required: false
+  - type: textarea
+    id: details
+    attributes:
+      label: What you've tried
+      description: Commands, the script's metadata block, and any output (redacted).
+      render: text
+    validations:
+      required: false

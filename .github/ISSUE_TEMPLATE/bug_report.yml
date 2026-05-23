@@ -1,0 +1,105 @@
+name: Bug report
+description: Something in sr isn't working the way it should
+labels: ["bug", "needs-info"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug. A clear report gets a faster fix.
+
+        **Before you post — scrub secrets.** Private-registry URLs, `.npmrc`
+        lines, and auth output can contain tokens or credentials. Redact them.
+        Issues here are public.
+
+        Questions, licensing, and "how do I…" aren't bugs — see the links on the
+        [new-issue chooser](https://github.com/Original-JT/sr-release/issues/new/choose).
+  - type: input
+    id: version
+    attributes:
+      label: sr version
+      description: Paste the full output of `sr --version`.
+      placeholder: "sr 20260523-a1b2c3d"
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: OS and architecture where the problem happens.
+      options:
+        - macOS (Apple Silicon / aarch64)
+        - Linux (x86_64)
+        - Windows (x86_64)
+        - Other / not listed
+    validations:
+      required: true
+  - type: dropdown
+    id: runtime
+    attributes:
+      label: Runtime
+      description: Which runtime the failing script targets (the `runtime:` in its metadata).
+      options:
+        - Node
+        - Deno
+        - Bun
+        - Python
+        - Ruby
+        - Go
+        - Haskell
+        - Julia
+        - Bash
+        - Zsh
+        - Fish
+        - Nushell
+        - Dash
+        - "Not sure / not runtime-specific"
+    validations:
+      required: true
+  - type: input
+    id: runtime-version
+    attributes:
+      label: Runtime version
+      description: If you pinned one via `runtime-version:`, give it here. Otherwise leave blank.
+      placeholder: "e.g. node 22, python 3.12"
+    validations:
+      required: false
+  - type: dropdown
+    id: private-registry
+    attributes:
+      label: Does the script use a private registry?
+      description: AWS CodeArtifact, Azure Artifacts, GCP Artifact Registry, or a custom feed.
+      options:
+        - "No"
+        - "Yes"
+        - "Not sure"
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did you expect, and what did sr do instead?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: |
+        The exact command(s) you ran and, if you can, a minimal script that
+        triggers it (metadata block included). The smaller the repro, the faster the fix.
+      placeholder: |
+        1. Save this as repro.ts:
+           ...
+        2. Run: sr repro.ts
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Command output / error
+      description: Paste what sr printed — the error message and any surrounding output. Remember to redact tokens and registry URLs.
+      render: text
+    validations:
+      required: false

@@ -1,0 +1,52 @@
+name: Feature request
+description: Suggest a capability or improvement for sr
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea. Tell us the problem first — the best features come
+        from a clear pain point, not a pre-decided solution.
+
+        Open-ended discussion or "would it be cool if…" fits better in
+        [Ideas Discussions](https://github.com/Original-JT/sr-release/discussions).
+        Use this form when you have a concrete request.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: The situation you hit where sr fell short. What were you doing?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: What should sr do? A flag, a metadata key, a new runtime, different output — be as concrete as you can.
+    validations:
+      required: true
+  - type: dropdown
+    id: runtimes
+    attributes:
+      label: Which runtime(s) does this affect?
+      multiple: true
+      options:
+        - All / runtime-agnostic
+        - Node
+        - Deno
+        - Bun
+        - Python
+        - Ruby
+        - Go
+        - Haskell
+        - Julia
+        - Shell (Bash/Zsh/Fish/Nushell/Dash)
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you've considered
+      description: Workarounds you're using today, or other ways this could be solved.
+    validations:
+      required: false
