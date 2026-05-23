@@ -18,7 +18,7 @@ fi
 
 label() {
   # $1 = name, $2 = color (hex, no #), $3 = description
-  gh label create "$1" --color "$2" --description "$3" --force "${REPO_ARG[@]}"
+  gh label create "$1" --color "$2" --description "$3" --force ${REPO_ARG[@]+"${REPO_ARG[@]}"}
 }
 
 # --- Triage ---
