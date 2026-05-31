@@ -2,7 +2,7 @@
 
 > **Home: [originaljt.com](https://originaljt.com)** &nbsp;·&nbsp; [Docs](https://originaljt.com/docs/installation/) &nbsp;·&nbsp; [Pricing](https://originaljt.com/pricing/) &nbsp;·&nbsp; [Downloads](https://github.com/Original-JT/sr-release/releases)
 
-**`sr`** runs self-contained scripts across **13 runtimes** with inline dependency metadata. No `package.json`. No `requirements.txt`. No `go.mod`. No project files. Just a single script that knows what it needs.
+**`sr`** runs self-contained scripts across **15 runtimes** with inline dependency metadata. No `package.json`. No `requirements.txt`. No `go.mod`. No project files. Just a single script that knows what it needs.
 
 ```typescript
 #!/usr/bin/env sr
@@ -35,6 +35,7 @@ That's it. Dependencies installed into a shared cache. Runtimes auto-installed v
 | Haskell | runghc |
 | Julia | julia |
 | Shell | Bash, Zsh, Fish, Nushell, Dash |
+| PowerShell | pwsh (7+), powershell (Windows 5.1) |
 
 ## Install
 
@@ -113,7 +114,7 @@ Full guides, command reference, and configuration docs live at **[originaljt.com
 
 ## Pricing & licensing
 
-`sr` is **free for personal, non-commercial use** — the full tool, all 13 runtimes, all future updates, no time limit. Commercial use is a one-time purchase: no subscriptions, no license keys, no activation. Your receipt is your license.
+`sr` is **free for personal, non-commercial use** — the full tool, all 15 runtimes, all future updates, no time limit. Commercial use is a one-time purchase: no subscriptions, no license keys, no activation. Your receipt is your license.
 
 | Tier | Price | Use |
 |---|---|---|
