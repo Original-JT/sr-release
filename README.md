@@ -1,8 +1,8 @@
-# sr — one-file scripts, any runtime
+# Source Runner — one-file scripts, any runtime
 
 > **Home: [originaljt.com](https://originaljt.com)** &nbsp;·&nbsp; [Docs](https://originaljt.com/docs/installation/) &nbsp;·&nbsp; [Pricing](https://originaljt.com/pricing/) &nbsp;·&nbsp; [Downloads](https://github.com/Original-JT/sr-release/releases)
 
-`sr` runs self-contained scripts with their runtime and dependencies declared inline — no `package.json`, no `requirements.txt`, no project files. This repository hosts the release binaries; **everything else — guides, command reference, configuration, pricing — lives at [originaljt.com](https://originaljt.com).**
+**Source Runner** (`sr`) runs self-contained scripts with their runtime and dependencies declared inline — no `package.json`, no `requirements.txt`, no project files. This repository hosts the release binaries; **everything else — guides, command reference, configuration, pricing — lives at [originaljt.com](https://originaljt.com).**
 
 ## Install
 
