@@ -47,8 +47,8 @@ This repo is the home for bug reports, feature requests, and questions. Pick the
 
 | I want to… | Go here |
 |---|---|
-| **Report a bug** | [Open a bug report](https://github.com/Original-JT/sr-release/issues/new/choose) |
-| **Request a feature** | [Open a feature request](https://github.com/Original-JT/sr-release/issues/new/choose) |
+| **Report a bug** | [Open a bug report](https://github.com/Original-JT/sr-release/issues/new?template=bug_report.yml) |
+| **Request a feature** | [Open a feature request](https://github.com/Original-JT/sr-release/issues/new?template=feature_request.yml) |
 | **Ask "how do I…"** | [Q&A Discussions](https://github.com/Original-JT/sr-release/discussions/categories/q-a) |
 | **Licensing, billing, or commercial support** | Email **support@originaljt.com** |
 | **Report a security vulnerability** | Privately — see [SECURITY.md](SECURITY.md) |

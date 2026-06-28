@@ -5,8 +5,8 @@ Here's the fastest route depending on what you need.
 | I want to… | Go here |
 |---|---|
 | **Ask how to do something** | [Q&A Discussions](https://github.com/Original-JT/sr-release/discussions/categories/q-a) |
-| **Report a bug** | [New bug report](https://github.com/Original-JT/sr-release/issues/new/choose) |
-| **Suggest a feature** | [Ideas Discussions](https://github.com/Original-JT/sr-release/discussions/categories/ideas) for open-ended ideas, or a [feature request](https://github.com/Original-JT/sr-release/issues/new/choose) when it's concrete |
+| **Report a bug** | [New bug report](https://github.com/Original-JT/sr-release/issues/new?template=bug_report.yml) |
+| **Suggest a feature** | [Ideas Discussions](https://github.com/Original-JT/sr-release/discussions/categories/ideas) for open-ended ideas, or a [feature request](https://github.com/Original-JT/sr-release/issues/new?template=feature_request.yml) when it's concrete |
 | **Read the docs** | [originaljt.com/docs](https://originaljt.com/docs/installation/) |
 | **Ask about licensing, billing, or commercial support** | Email **support@originaljt.com** |
 | **Report a security vulnerability** | Privately — see [SECURITY.md](../SECURITY.md) |
