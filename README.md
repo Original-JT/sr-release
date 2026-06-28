@@ -41,6 +41,20 @@ $env:SR_VERSION = "YYYYMMDD-shortsha"; iwr -useb https://originaljt.com/install.
 
 > On macOS, files downloaded through a browser are tagged with a quarantine attribute, which triggers an "Apple cannot verify" warning on first run. Either remove the quarantine (`xattr -d com.apple.quarantine sr`) or, simpler, use the curl one-liner above — files fetched by `curl` aren't quarantined.
 
+## Feedback & support
+
+This repo is the home for bug reports, feature requests, and questions. Pick the right door:
+
+| I want to… | Go here |
+|---|---|
+| **Report a bug** | [Open a bug report](https://github.com/Original-JT/sr-release/issues/new/choose) |
+| **Request a feature** | [Open a feature request](https://github.com/Original-JT/sr-release/issues/new/choose) |
+| **Ask "how do I…"** | [Q&A Discussions](https://github.com/Original-JT/sr-release/discussions/categories/q-a) |
+| **Licensing, billing, or commercial support** | Email **support@originaljt.com** |
+| **Report a security vulnerability** | Privately — see [SECURITY.md](SECURITY.md) |
+
+Issues and discussions here are **public** — before posting, redact tokens, private-registry URLs, and `.npmrc` contents. See [SUPPORT.md](.github/SUPPORT.md) for the full guide.
+
 ---
 
 _`sr` is built and maintained by Original JT LLC. Full documentation and pricing live at **[originaljt.com](https://originaljt.com)**. Issues filed here are public; please don't include account info or other sensitive data in bug reports._

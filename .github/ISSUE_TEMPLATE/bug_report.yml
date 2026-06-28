@@ -44,14 +44,17 @@ body:
         - Bun
         - Python
         - Ruby
+        - Julia
         - Go
         - Haskell
-        - Julia
+        - Dart
         - Bash
         - Zsh
         - Fish
         - Nushell
         - Dash
+        - PowerShell 7+ (pwsh)
+        - Windows PowerShell 5.1 (powershell)
         - "Not sure / not runtime-specific"
     validations:
       required: true

@@ -37,10 +37,12 @@ body:
         - Bun
         - Python
         - Ruby
+        - Julia
         - Go
         - Haskell
-        - Julia
+        - Dart
         - Shell (Bash/Zsh/Fish/Nushell/Dash)
+        - PowerShell (pwsh/powershell)
     validations:
       required: false
   - type: textarea
